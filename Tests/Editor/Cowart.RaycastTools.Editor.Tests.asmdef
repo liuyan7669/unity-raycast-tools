@@ -1,0 +1,15 @@
+{
+  "name": "Cowart.RaycastTools.Editor.Tests",
+  "rootNamespace": "Cowart.RaycastTools.Tests",
+  "references": [
+    "Cowart.RaycastTools",
+    "Cowart.RaycastTools.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}
