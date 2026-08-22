@@ -1,6 +1,6 @@
 {
   "name": "com.cowart.raycast-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Raycast Tools",
   "description": "提供以物体本地 Z 轴为基准的前后左右直线射线、平面/立体扇形射线与方块射线，并支持 Scene 视图预览。",
   "unity": "2021.3",

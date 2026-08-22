@@ -60,7 +60,7 @@ com.cowart.raycast-tools
 创建并推送 `1.0.0` Tag 后，在 Package Manager 中使用：
 
 ```text
-https://github.com/liuyan7669/unity-raycast-tools.git#1.0.0
+https://github.com/liuyan7669/unity-raycast-tools.git#1.0.1
 ```
 
 开发期间如需跟踪主分支，可以临时使用不带 Tag 的 Git URL，但正式项目不建议这样做。
