@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace Cowart.RaycastTools.Tests
+namespace Cowart.RaycastUtilities.Tests
 {
     /// <summary>
     /// 验证直线射线方向与物体本地坐标轴的映射规则。

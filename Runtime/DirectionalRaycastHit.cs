@@ -1,10 +1,11 @@
 using UnityEngine;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 直线射线的方向标识及对应的 Unity 物理命中结果。
     /// </summary>
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "DirectionalRaycastHit")]
     public readonly struct DirectionalRaycastHit
     {
         /// <summary>

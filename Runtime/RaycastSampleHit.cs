@@ -1,10 +1,11 @@
 using UnityEngine;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 一条射线采样产生的命中信息，包含检测时使用的起点、方向和 Unity 物理命中结果。
     /// </summary>
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "RaycastSampleHit")]
     public readonly struct RaycastSampleHit
     {
         /// <summary>

@@ -1,10 +1,10 @@
 using System.Reflection;
-using Cowart.RaycastTools.Editor;
+using Cowart.RaycastUtilities.Editor;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 
-namespace Cowart.RaycastTools.Tests
+namespace Cowart.RaycastUtilities.Tests
 {
     /// <summary>
     /// 验证扇形射线自定义 Inspector 的创建和序列化字段绑定。

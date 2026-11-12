@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 所有射线组件的公共基类，统一提供检测参数、编辑器预览、检测结果和完成事件。
     /// </summary>
     /// <remarks>脚本所绑定物体的世界坐标是默认起点，自身本地 +Z 轴是默认前方。</remarks>
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "RaycasterBase")]
     public abstract class RaycasterBase : MonoBehaviour
     {
         [SerializeField, Min(0f)]

@@ -1,8 +1,9 @@
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 射线检测命中的收集方式。
     /// </summary>
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "RaycastDetectionMode")]
     public enum RaycastDetectionMode
     {
         /// <summary>

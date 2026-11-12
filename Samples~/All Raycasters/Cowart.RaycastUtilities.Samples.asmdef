@@ -1,0 +1,7 @@
+{
+  "name": "Cowart.RaycastUtilities.Samples",
+  "rootNamespace": "Cowart.RaycastUtilities.Samples",
+  "references": [
+    "GUID:a418dc3509a84dfe9ae15d2f4567af9b"
+  ]
+}

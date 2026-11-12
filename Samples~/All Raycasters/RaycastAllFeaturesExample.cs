@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cowart.RaycastTools.Samples
+namespace Cowart.RaycastUtilities.Samples
 {
     /// <summary>
-    /// Raycast Tools 全功能示例，集中演示统一事件接口和每种射线的便捷调用方式。
+    /// Raycast Utilities 全功能示例，集中演示统一事件接口和每种射线的便捷调用方式。
     /// </summary>
     public sealed class RaycastAllFeaturesExample : MonoBehaviour
     {
@@ -82,7 +82,7 @@ namespace Cowart.RaycastTools.Samples
         private void OnGUI()
         {
             GUILayout.BeginArea(new Rect(12f, 12f, 460f, 360f), GUI.skin.box);
-            GUILayout.Label("Raycast Tools 全功能示例");
+            GUILayout.Label("Raycast Utilities 全功能示例");
             GUILayout.Label("Scene 视图中的绿色线是编辑器预览，黄色线是最近一次运行时命中路径。");
 
             if (GUILayout.Button("执行全部统一 Cast()"))

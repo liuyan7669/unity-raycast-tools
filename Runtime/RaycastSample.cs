@@ -1,10 +1,11 @@
 using UnityEngine;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 一条待检测射线的世界空间起点和方向。
     /// </summary>
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "RaycastSample")]
     public readonly struct RaycastSample
     {
         /// <summary>

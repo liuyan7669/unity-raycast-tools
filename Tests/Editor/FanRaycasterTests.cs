@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace Cowart.RaycastTools.Tests
+namespace Cowart.RaycastUtilities.Tests
 {
     /// <summary>
     /// 验证三种扇形模式生成的方向、起点和实际命中行为。

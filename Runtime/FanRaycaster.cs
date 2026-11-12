@@ -2,11 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 扇形射线的空间生成方式。
     /// </summary>
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "FanRaycastMode")]
     public enum FanRaycastMode
     {
         /// <summary>
@@ -28,7 +29,8 @@ namespace Cowart.RaycastTools
     /// <summary>
     /// 从脚本所绑定物体生成平面扇形、垂直张开的多扇面或上下平移的立体扇形射线。
     /// </summary>
-    [AddComponentMenu("Cowart/Raycast Tools/Fan Raycaster")]
+    [AddComponentMenu("Cowart/Raycast Utilities/Fan Raycaster")]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "FanRaycaster")]
     public sealed class FanRaycaster : RaycasterBase
     {
         private readonly List<RaycastSample> sampleBuffer = new List<RaycastSample>();

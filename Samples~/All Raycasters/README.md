@@ -1,6 +1,6 @@
 # All Raycasters
 
-导入 Sample 后打开 `Raycast Tools Demo.unity`。不进入 Play Mode 时，Scene 视图会直接显示默认绿色预览线；进入 Play Mode 后，左上角操作面板可以执行所有示例接口。
+导入 Sample 后打开 `Raycast Utilities Demo.unity`。不进入 Play Mode 时，Scene 视图会直接显示默认绿色预览线；进入 Play Mode 后，左上角操作面板可以执行所有示例接口。
 
 ## 场景内容
 

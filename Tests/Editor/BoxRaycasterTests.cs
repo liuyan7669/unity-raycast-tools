@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 
-namespace Cowart.RaycastTools.Tests
+namespace Cowart.RaycastUtilities.Tests
 {
     /// <summary>
     /// 验证方块射线的方向、起点和尺寸换算。

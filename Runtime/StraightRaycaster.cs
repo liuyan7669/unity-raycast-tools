@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 从脚本所绑定物体的位置沿自身前、后、左、右方向执行直线射线检测。
     /// </summary>
     /// <remarks>前方固定为本地 +Z 轴，后、左、右均以该自身前方为参考。</remarks>
-    [AddComponentMenu("Cowart/Raycast Tools/Straight Raycaster")]
+    [AddComponentMenu("Cowart/Raycast Utilities/Straight Raycaster")]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "StraightRaycaster")]
     public sealed class StraightRaycaster : RaycasterBase
     {
         private static readonly RayDirections[] DirectionOrder =

@@ -2,13 +2,15 @@ using System;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace Cowart.RaycastTools.Tests
+namespace Cowart.RaycastUtilities.Tests
 {
     /// <summary>
     /// 验证不同射线组件共用的结果、事件、检测模式和去重规则。
     /// </summary>
     public sealed class UnifiedRaycasterTests
     {
+        // 将测试碰撞体和射线限制到同一层，避免当前打开场景的碰撞体干扰断言。
+        private const int TestLayer = 31;
         private GameObject raycasterObject;
         private GameObject nearTarget;
         private GameObject farTarget;
@@ -77,6 +79,7 @@ namespace Cowart.RaycastTools.Tests
             fanRaycaster.Angle = 30f;
             fanRaycaster.PlaneRayCount = 5;
             fanRaycaster.DetectionMode = RaycastDetectionMode.AllHits;
+            fanRaycaster.LayerMask = 1 << TestLayer;
             Physics.SyncTransforms();
 
             RaycastResult result = fanRaycaster.Cast();
@@ -91,6 +94,7 @@ namespace Cowart.RaycastTools.Tests
             int expectedHitCount)
         {
             raycaster.Distance = 6f;
+            raycaster.LayerMask = 1 << TestLayer;
             raycaster.DetectionMode = detectionMode;
             int eventCount = 0;
             RaycastResult eventResult = null;
@@ -131,6 +135,7 @@ namespace Cowart.RaycastTools.Tests
         {
             GameObject target = GameObject.CreatePrimitive(PrimitiveType.Cube);
             target.name = name;
+            target.layer = TestLayer;
             target.transform.position = position;
             target.transform.localScale = Vector3.one * 0.5f;
             return target;

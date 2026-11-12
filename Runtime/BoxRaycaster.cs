@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 从脚本所绑定物体的位置沿自身本地 +Z 轴执行方块形状投射。
     /// </summary>
-    [AddComponentMenu("Cowart/Raycast Tools/Box Raycaster")]
+    [AddComponentMenu("Cowart/Raycast Utilities/Box Raycaster")]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "BoxRaycaster")]
     public sealed class BoxRaycaster : RaycasterBase
     {
         [SerializeField]

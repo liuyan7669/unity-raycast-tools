@@ -1,0 +1,11 @@
+{
+  "name": "Cowart.RaycastUtilities.Editor",
+  "rootNamespace": "Cowart.RaycastUtilities.Editor",
+  "references": [
+    "Cowart.RaycastUtilities"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}

@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 一次统一射线检测的结果，记录来源组件、检测方式以及按 Collider 去重后的命中列表。
     /// </summary>
     /// <remarks>同一 Collider 被多条射线命中时只保留距离最近的一条，列表按 <see cref="RaycastHit.distance"/> 升序排列。</remarks>
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "RaycastResult")]
     public sealed class RaycastResult
     {
         private sealed class HitDistanceComparer : IComparer<RaycastSampleHit>

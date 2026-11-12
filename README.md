@@ -1,12 +1,12 @@
-# Raycast Tools
+# Raycast Utilities
 
-`com.cowart.raycast-tools` 是面向 Unity 3D Physics 的可视化射线检测包，提供直线射线、三种扇形射线和方块投射。所有组件都以脚本所绑定物体的位置为默认起点，以物体自身本地 `+Z` 轴为前方，并通过统一的 `Cast()` 与 `Action<RaycastResult>` 事件返回结果。
+`com.cowart.raycast-utilities` 是面向 Unity 3D Physics 的可视化射线检测包，提供直线射线、三种扇形射线和方块投射。所有组件都以脚本所绑定物体的位置为默认起点，以物体自身本地 `+Z` 轴为前方，并通过统一的 `Cast()` 与 `Action<RaycastResult>` 事件返回结果。
 
-- Package Manager 显示名：`Raycast Tools`
-- 包名：`com.cowart.raycast-tools`
-- Runtime 程序集：`Cowart.RaycastTools`
-- Editor 程序集：`Cowart.RaycastTools.Editor`
-- 命名空间：`Cowart.RaycastTools`
+- Package Manager 显示名：`Raycast Utilities`
+- 包名：`com.cowart.raycast-utilities`
+- Runtime 程序集：`Cowart.RaycastUtilities`
+- Editor 程序集：`Cowart.RaycastUtilities.Editor`
+- 命名空间：`Cowart.RaycastUtilities`
 - 许可：MIT
 
 ## 功能
@@ -44,13 +44,13 @@
 ```text
 Name: package.openupm.com
 URL: https://package.openupm.com
-Scope: com.cowart.raycast-tools
+Scope: com.cowart.raycast-utilities
 ```
 
 然后通过 `Add package by name` 安装：
 
 ```text
-com.cowart.raycast-tools
+com.cowart.raycast-utilities
 ```
 
 当前 README 仅预留标准安装方式，不代表已经在 OpenUPM 实时可用。
@@ -60,7 +60,7 @@ com.cowart.raycast-tools
 创建并推送 `1.0.0` Tag 后，在 Package Manager 中使用：
 
 ```text
-https://github.com/liuyan7669/unity-raycast-tools.git#1.0.2
+https://github.com/liuyan7669/unity-raycast-utilities.git#2.0.0
 ```
 
 开发期间如需跟踪主分支，可以临时使用不带 Tag 的 Git URL，但正式项目不建议这样做。
@@ -75,37 +75,37 @@ https://github.com/liuyan7669/unity-raycast-tools.git#1.0.2
 也可以在目标项目的 `Packages\manifest.json` 中使用本地目录：
 
 ```json
-"com.cowart.raycast-tools": "file:E:/YourPackages/unity-raycast-tools"
+"com.cowart.raycast-utilities": "file:E:/YourPackages/unity-raycast-utilities"
 ```
 
 JSON 中的 Windows 路径建议使用正斜杠，避免反斜杠转义错误。
 
 ### 作为 Embedded Package 安装
 
-把完整包目录放到项目的 `Packages\com.cowart.raycast-tools`，并在 `Packages\manifest.json` 中添加：
+把完整包目录放到项目的 `Packages\com.cowart.raycast-utilities`，并在 `Packages\manifest.json` 中添加：
 
 ```json
-"com.cowart.raycast-tools": "file:com.cowart.raycast-tools"
+"com.cowart.raycast-utilities": "file:com.cowart.raycast-utilities"
 ```
 
 计划使用的远端仓库地址是：
 
 ```text
-https://github.com/liuyan7669/unity-raycast-tools.git
+https://github.com/liuyan7669/unity-raycast-utilities.git
 ```
 
 ## 导入 All Raycasters 示例
 
 1. 打开 **Window > Package Manager**。
-2. 选中 **Raycast Tools**。
+2. 选中 **Raycast Utilities**。
 3. 展开 **Samples**。
 4. 点击 **All Raycasters** 右侧的 **Import**。
-5. 打开导入后的 `Raycast Tools Demo.unity`。
+5. 打开导入后的 `Raycast Utilities Demo.unity`。
 
 Unity 2021.3 默认会将示例导入到：
 
 ```text
-Assets\Samples\Raycast Tools\1.0.0\All Raycasters
+Assets\Samples\Raycast Utilities\1.0.0\All Raycasters
 ```
 
 不进入 Play Mode 时，Scene 视图会显示默认绿色预览线。进入 Play Mode 后，左上角操作面板可以：
@@ -123,7 +123,7 @@ Assets\Samples\Raycast Tools\1.0.0\All Raycasters
 把任意射线组件挂到 GameObject。脚本所在物体的 `Transform.position` 是默认检测起点，物体自身本地 `+Z` 是前方。
 
 ```csharp
-using Cowart.RaycastTools;
+using Cowart.RaycastUtilities;
 using UnityEngine;
 
 public sealed class RaycastUsageExample : MonoBehaviour
@@ -216,7 +216,7 @@ RaycastResult allHitsResult = raycaster.Cast();
 
 ```csharp
 using System.Collections.Generic;
-using Cowart.RaycastTools;
+using Cowart.RaycastUtilities;
 using UnityEngine;
 
 public sealed class StraightRayExample : MonoBehaviour
@@ -262,7 +262,7 @@ Volume 的 `VerticalAngle` 是最下层到最上层的完整垂直张角。Solid
 
 ```csharp
 using System.Collections.Generic;
-using Cowart.RaycastTools;
+using Cowart.RaycastUtilities;
 using UnityEngine;
 
 public sealed class FanRayExample : MonoBehaviour
@@ -292,7 +292,7 @@ public sealed class FanRayExample : MonoBehaviour
 - `WorldHalfExtents`：最终参与检测的世界半尺寸。
 
 ```csharp
-using Cowart.RaycastTools;
+using Cowart.RaycastUtilities;
 using UnityEngine;
 
 public sealed class BoxRayExample : MonoBehaviour
@@ -343,10 +343,10 @@ public sealed class BoxRayExample : MonoBehaviour
 开发工程需要安装 Unity Test Framework，并在项目 `Packages\manifest.json` 的 `testables` 中加入：
 
 ```json
-"com.cowart.raycast-tools"
+"com.cowart.raycast-utilities"
 ```
 
-然后在 **Window > General > Test Runner > EditMode** 中运行 `Cowart.RaycastTools.Editor.Tests`。
+然后在 **Window > General > Test Runner > EditMode** 中运行 `Cowart.RaycastUtilities.Editor.Tests`。
 
 当前自动验证基线：
 
@@ -362,14 +362,14 @@ public sealed class BoxRayExample : MonoBehaviour
 ## 包目录结构
 
 ```text
-com.cowart.raycast-tools/
+com.cowart.raycast-utilities/
   .gitattributes
   package.json
   README.md
   CHANGELOG.md
   LICENSE.md
   Runtime/
-    Cowart.RaycastTools.asmdef
+    Cowart.RaycastUtilities.asmdef
     RaycasterBase.cs
     RaycastResult.cs
     RaycastDetectionMode.cs
@@ -381,13 +381,13 @@ com.cowart.raycast-tools/
     FanRaycaster.cs
     BoxRaycaster.cs
   Editor/
-    Cowart.RaycastTools.Editor.asmdef
+    Cowart.RaycastUtilities.Editor.asmdef
     FanRaycasterEditor.cs
   Samples~/
     All Raycasters/
-      Cowart.RaycastTools.Samples.asmdef
+      Cowart.RaycastUtilities.Samples.asmdef
       RaycastAllFeaturesExample.cs
-      Raycast Tools Demo.unity
+      Raycast Utilities Demo.unity
       README.md
       Materials/
         Ground.mat
@@ -395,7 +395,7 @@ com.cowart.raycast-tools/
         Ray Origin.mat
   Tests/
     Editor/
-      Cowart.RaycastTools.Editor.Tests.asmdef
+      Cowart.RaycastUtilities.Editor.Tests.asmdef
       StraightRaycasterTests.cs
       FanRaycasterTests.cs
       BoxRaycasterTests.cs
@@ -411,8 +411,16 @@ Unity 的 `.meta` 文件属于包资产引用的一部分，必须与对应脚�
 - 不要同时保留 Assets 下的旧源码和 UPM 包，否则可能产生重复类型或程序集冲突。
 - 卸载时移除项目 `manifest.json` 中的依赖，并移除对应本地包目录或 Git URL。
 - 已导入到 `Assets\Samples` 的示例属于项目资产，卸载包不会自动删除；不再需要时可单独移除。
-- 业务程序集仍引用 `Cowart.RaycastTools` API 时，卸载后产生编译错误属于预期行为，应先移除业务引用。
+- 业务程序集仍引用 `Cowart.RaycastUtilities` API 时，卸载后产生编译错误属于预期行为，应先移除业务引用。
 
 ## License
 
 MIT，详见 [LICENSE.md](LICENSE.md)。
+
+## 改名迁移（2.0.0）
+
+- 包标识：`com.cowart.raycast-tools` → `com.cowart.raycast-utilities`。
+- Git 仓库：`https://github.com/liuyan7669/unity-raycast-tools.git` → `https://github.com/liuyan7669/unity-raycast-utilities.git`；原有提交和旧 tag 保留。
+- 程序集、命名空间、示例和测试已同步使用新名称。业务项目需更新 manifest、asmdef 和 using；旧包与新包不可同时安装。
+- 资源 .meta GUID 保留；已改命名空间的运行时类型提供 MovedFrom 迁移标记。已有源码仍需按新命名空间修改。
+- 示例中的可选集成依赖保持可选，核心包不新增其他 Cowart 包依赖。

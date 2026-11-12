@@ -1827,7 +1827,7 @@ GameObject:
   - component: {fileID: 1091557768}
   - component: {fileID: 1091557767}
   m_Layer: 0
-  m_Name: Raycast Tools Demo Controller
+  m_Name: Raycast Utilities Demo Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

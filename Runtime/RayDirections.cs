@@ -1,11 +1,12 @@
 using System;
 
-namespace Cowart.RaycastTools
+namespace Cowart.RaycastUtilities
 {
     /// <summary>
     /// 直线射线使用的物体本地方向，可通过按位或同时选择多个方向。
     /// </summary>
     [Flags]
+    [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "RayDirections")]
     public enum RayDirections
     {
         /// <summary>

@@ -1,6 +1,6 @@
 using UnityEditor;
 
-namespace Cowart.RaycastTools.Editor
+namespace Cowart.RaycastUtilities.Editor
 {
     /// <summary>
     /// 扇形射线组件的自定义 Inspector，仅显示当前模式真正生效的参数。
