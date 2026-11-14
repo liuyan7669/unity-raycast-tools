@@ -1,4 +1,7 @@
 {
   "name": "Cowart.RaycastUtilities",
-  "rootNamespace": "Cowart.RaycastUtilities"
+  "rootNamespace": "Cowart.RaycastUtilities",
+  "references": [
+    "Cowart.InspectorGroups"
+  ]
 }

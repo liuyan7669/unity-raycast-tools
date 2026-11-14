@@ -1,4 +1,3 @@
-using System.Reflection;
 using Cowart.RaycastUtilities.Editor;
 using NUnit.Framework;
 using UnityEditor;
@@ -13,19 +12,19 @@ namespace Cowart.RaycastUtilities.Tests
     {
         private static readonly string[] SerializedPropertyFieldNames =
         {
-            "scriptProperty",
-            "modeProperty",
-            "angleProperty",
-            "planeRayCountProperty",
-            "verticalAngleProperty",
-            "verticalPlaneCountProperty",
-            "verticalHeightProperty",
-            "distanceProperty",
-            "detectionModeProperty",
-            "layerMaskProperty",
-            "queryTriggerInteractionProperty",
-            "previewColorProperty",
-            "previewOnlyWhenSelectedProperty"
+            "m_Script",
+            "mode",
+            "angle",
+            "planeRayCount",
+            "verticalAngle",
+            "verticalPlaneCount",
+            "verticalHeight",
+            "distance",
+            "detectionMode",
+            "layerMask",
+            "queryTriggerInteraction",
+            "previewColor",
+            "previewOnlyWhenSelected"
         };
 
         /// <summary>
@@ -44,15 +43,8 @@ namespace Cowart.RaycastUtilities.Tests
 
                 foreach (string fieldName in SerializedPropertyFieldNames)
                 {
-                    FieldInfo field = typeof(FanRaycasterEditor).GetField(
-                        fieldName,
-                        BindingFlags.Instance | BindingFlags.NonPublic);
-
-                    Assert.That(field, Is.Not.Null, $"缺少 Inspector 字段：{fieldName}");
-                    Assert.That(
-                        field.GetValue(editor),
-                        Is.Not.Null,
-                        $"未找到对应的序列化属性：{fieldName}");
+                    Assert.That(editor.serializedObject.FindProperty(fieldName), Is.Not.Null,
+                        $"缺少序列化属性：{fieldName}");
                 }
             }
             finally

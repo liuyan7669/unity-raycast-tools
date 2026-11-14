@@ -7,8 +7,9 @@ namespace Cowart.RaycastUtilities
     /// 从脚本所绑定物体的位置沿自身前、后、左、右方向执行直线射线检测。
     /// </summary>
     /// <remarks>前方固定为本地 +Z 轴，后、左、右均以该自身前方为参考。</remarks>
-    [AddComponentMenu("Cowart/Raycast Utilities/Straight Raycaster")]
+    [AddComponentMenu("Cowart/射线/直线射线检测")]
     [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "StraightRaycaster")]
+    [Cowart.InspectorGroups.HideScript]
     public sealed class StraightRaycaster : RaycasterBase
     {
         private static readonly RayDirections[] DirectionOrder =
@@ -19,6 +20,7 @@ namespace Cowart.RaycastUtilities
             RayDirections.Right
         };
 
+        [Cowart.InspectorGroups.FoldoutGroup("方向设置", true, style: Cowart.InspectorGroups.InspectorGroupStyle.Framework)]
         [SerializeField]
         [Tooltip("需要检测的方向。前方始终是物体本地 +Z，其他方向以该前方为参考。")]
         private RayDirections directions = RayDirections.Forward;

@@ -1,6 +1,6 @@
 {
   "name": "com.cowart.raycast-utilities",
-  "version": "2.0.0",
+  "version": "3.1.0",
   "displayName": "Raycast Utilities",
   "description": "提供以物体本地 Z 轴为基准的前后左右直线射线、平面/立体扇形射线与方块射线，并支持 Scene 视图预览。",
   "unity": "2021.3",
@@ -13,7 +13,8 @@
     "url": "https://github.com/liuyan7669/unity-raycast-utilities.git"
   },
   "dependencies": {
-    "com.unity.modules.physics": "1.0.0"
+    "com.unity.modules.physics": "1.0.0",
+    "com.cowart.inspector-groups": "3.1.0"
   },
   "keywords": [
     "raycast",

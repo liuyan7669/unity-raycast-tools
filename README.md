@@ -35,7 +35,7 @@
 
 ## 安装
 
-当前包版本为 `1.0.0`。正式项目建议固定 Tag，不要直接依赖持续变化的 `main` 分支。
+当前包版本为 `3.1.0`。正式项目建议固定 Tag，不要直接依赖持续变化的 `main` 分支。
 
 ### 通过 OpenUPM 安装（发布后）
 
@@ -57,10 +57,10 @@ com.cowart.raycast-utilities
 
 ### 通过 Git URL 安装
 
-创建并推送 `1.0.0` Tag 后，在 Package Manager 中使用：
+创建并推送 `3.1.0` Tag 后，在 Package Manager 中使用：
 
 ```text
-https://github.com/liuyan7669/unity-raycast-utilities.git#2.0.0
+https://github.com/liuyan7669/unity-raycast-utilities.git#3.1.0
 ```
 
 开发期间如需跟踪主分支，可以临时使用不带 Tag 的 Git URL，但正式项目不建议这样做。
@@ -105,7 +105,7 @@ https://github.com/liuyan7669/unity-raycast-utilities.git
 Unity 2021.3 默认会将示例导入到：
 
 ```text
-Assets\Samples\Raycast Utilities\1.0.0\All Raycasters
+Assets\Samples\Raycast Utilities\3.1.0\All Raycasters
 ```
 
 不进入 Play Mode 时，Scene 视图会显示默认绿色预览线。进入 Play Mode 后，左上角操作面板可以：
@@ -423,4 +423,10 @@ MIT，详见 [LICENSE.md](LICENSE.md)。
 - Git 仓库：`https://github.com/liuyan7669/unity-raycast-tools.git` → `https://github.com/liuyan7669/unity-raycast-utilities.git`；原有提交和旧 tag 保留。
 - 程序集、命名空间、示例和测试已同步使用新名称。业务项目需更新 manifest、asmdef 和 using；旧包与新包不可同时安装。
 - 资源 .meta GUID 保留；已改命名空间的运行时类型提供 MovedFrom 迁移标记。已有源码仍需按新命名空间修改。
-- 示例中的可选集成依赖保持可选，核心包不新增其他 Cowart 包依赖。
+- 示例中的可选集成依赖保持可选，核心包仅依赖 Inspector Groups，业务包之间不互相依赖（Samples 除外）。
+
+Add Component 菜单统一归入 `Cowart > 射线`，提供直线、盒形和扇形射线检测。
+
+## Inspector 统一依赖
+
+本包声明依赖 `com.cowart.inspector-groups` `3.1.0`，Inspector 样式统一由该基础包提供。安装前须配置 OpenUPM scoped registry（`https://package.openupm.com`，scope `com.cowart`）；UPM 会根据 dependencies 连带解析 Inspector Groups。使用未发布源码时，请同时使用本地 Inspector Groups 3.1.0。业务包之间不互相依赖，Samples 的可选组合不受此限制。

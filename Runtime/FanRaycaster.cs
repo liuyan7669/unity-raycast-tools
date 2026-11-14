@@ -29,12 +29,13 @@ namespace Cowart.RaycastUtilities
     /// <summary>
     /// 从脚本所绑定物体生成平面扇形、垂直张开的多扇面或上下平移的立体扇形射线。
     /// </summary>
-    [AddComponentMenu("Cowart/Raycast Utilities/Fan Raycaster")]
+    [AddComponentMenu("Cowart/射线/扇形射线检测")]
     [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "FanRaycaster")]
+    [Cowart.InspectorGroups.HideScript]
     public sealed class FanRaycaster : RaycasterBase
     {
         private readonly List<RaycastSample> sampleBuffer = new List<RaycastSample>();
-
+        [Cowart.InspectorGroups.FoldoutGroup("扇形设置", true, style: Cowart.InspectorGroups.InspectorGroupStyle.Framework)]
         [SerializeField]
         [Tooltip("Plane 是单个扇面；Volume 从同一起点上下张开；Solid3D 沿本地 Y 轴平移多个平行扇面。")]
         private FanRaycastMode mode = FanRaycastMode.Plane;
@@ -46,16 +47,16 @@ namespace Cowart.RaycastUtilities
         [SerializeField, Range(1, 128)]
         [Tooltip("每个扇面从左到右的射线数量。")]
         private int planeRayCount = 9;
-
+        [Cowart.InspectorGroups.ShowIf("mode", FanRaycastMode.Volume)]
         [SerializeField, Range(0f, 180f)]
         [Tooltip("Volume 模式从最下层到最上层的垂直完整张角。")]
         private float verticalAngle = 60f;
-
+        [Cowart.InspectorGroups.ShowIf("mode", FanRaycastMode.Volume, FanRaycastMode.Solid3D)]
         [FormerlySerializedAs("volumeRingCount")]
         [SerializeField, Range(1, 32)]
         [Tooltip("Volume 或 Solid3D 模式的垂直扇面数量。")]
         private int verticalPlaneCount = 5;
-
+        [Cowart.InspectorGroups.ShowIf("mode", FanRaycastMode.Solid3D)]
         [SerializeField, Min(0f)]
         [Tooltip("Solid3D 模式从最下层到最上层的总高度。")]
         private float verticalHeight = 2f;

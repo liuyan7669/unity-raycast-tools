@@ -11,6 +11,7 @@ namespace Cowart.RaycastUtilities
     [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "RaycasterBase")]
     public abstract class RaycasterBase : MonoBehaviour
     {
+        [Cowart.InspectorGroups.FoldoutGroup("物理检测", true, style: Cowart.InspectorGroups.InspectorGroupStyle.Framework)]
         [SerializeField, Min(0f)]
         [Tooltip("射线或形状投射的最大距离。")]
         private float distance = 5f;
@@ -26,7 +27,7 @@ namespace Cowart.RaycastUtilities
         [SerializeField]
         [Tooltip("射线是否检测 Trigger，UseGlobal 表示遵循 Physics.queriesHitTriggers。")]
         private QueryTriggerInteraction queryTriggerInteraction = QueryTriggerInteraction.UseGlobal;
-
+        [Cowart.InspectorGroups.FoldoutGroup("编辑器预览", true, style: Cowart.InspectorGroups.InspectorGroupStyle.Framework)]
         [SerializeField]
         [Tooltip("Scene 视图预览线颜色。")]
         private Color previewColor = Color.green;

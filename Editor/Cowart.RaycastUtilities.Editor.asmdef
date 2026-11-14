@@ -2,7 +2,9 @@
   "name": "Cowart.RaycastUtilities.Editor",
   "rootNamespace": "Cowart.RaycastUtilities.Editor",
   "references": [
-    "Cowart.RaycastUtilities"
+    "Cowart.RaycastUtilities",
+    "Cowart.InspectorGroups.Editor",
+    "Cowart.InspectorGroups"
   ],
   "includePlatforms": [
     "Editor"

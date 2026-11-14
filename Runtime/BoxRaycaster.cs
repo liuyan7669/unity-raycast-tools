@@ -6,10 +6,12 @@ namespace Cowart.RaycastUtilities
     /// <summary>
     /// 从脚本所绑定物体的位置沿自身本地 +Z 轴执行方块形状投射。
     /// </summary>
-    [AddComponentMenu("Cowart/Raycast Utilities/Box Raycaster")]
+    [AddComponentMenu("Cowart/射线/盒形射线检测")]
     [UnityEngine.Scripting.APIUpdating.MovedFrom(true, sourceNamespace: "Cowart.RaycastTools", sourceAssembly: "Cowart.RaycastTools", sourceClassName: "BoxRaycaster")]
+    [Cowart.InspectorGroups.HideScript]
     public sealed class BoxRaycaster : RaycasterBase
     {
+        [Cowart.InspectorGroups.FoldoutGroup("盒形设置", true, style: Cowart.InspectorGroups.InspectorGroupStyle.Framework)]
         [SerializeField]
         [Tooltip("起点方块的本地半尺寸。")]
         private Vector3 halfExtents = Vector3.one * 0.5f;
